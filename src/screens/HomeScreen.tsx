@@ -1,6 +1,5 @@
 import React, { useRef, useState, useCallback } from 'react';
-import { StyleSheet, View, Text, Dimensions, StatusBar } from 'react-native';
-import { FlashList } from '@shopify/flash-list';
+import { StyleSheet, View, Text, Dimensions, StatusBar, FlatList } from 'react-native';
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 import { Video, ResizeMode } from 'expo-av';
 import { Image } from 'expo-image';
@@ -145,7 +144,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <FlashList
+      <FlatList
         data={MOCK_FEED}
         renderItem={({ item }) => (
           <FeedItemComponent 
@@ -153,7 +152,6 @@ export default function HomeScreen() {
             isActive={viewableItems.length > 0 && viewableItems[0].item.id === item.id} 
           />
         )}
-        estimatedItemSize={height}
         pagingEnabled
         decelerationRate="fast"
         keyExtractor={(item) => item.id}
