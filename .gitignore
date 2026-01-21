@@ -1,0 +1,41 @@
+# OSX
+.DS_Store
+
+# Node
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# React Native
+*.jsbundle
+.bundle
+
+# Android
+android/build/
+android/app/build/
+android/.gradle/
+android/app/.cxx/
+android/app/build/
+android/local.properties
+
+# iOS
+ios/Pods/
+ios/build/
+ios/*.xcworkspace
+ios/*.xcodeproj/project.xcworkspace
+ios/*.xcodeproj/xcuserdata
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Metro
+.metro/
+
+# Testing
+coverage/
